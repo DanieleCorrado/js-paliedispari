@@ -1,10 +1,16 @@
-let check = false;
+
+// Richiedo all'untente di inesrire la parola
 
 let word = prompt("Inseri la parola da controllare");
 
 let counter = word.length;
+let check = false;
+
+// richiamo la funzione 
 
 isPalindrome(word);
+
+// funzione che effettua controlla se la parola inserita dall'utente è palindorma o meno
 
 function isPalindrome(word) {
   
@@ -12,15 +18,16 @@ function isPalindrome(word) {
   
 
     if(word[i] === word[counter-1]) {
-  
+
       check = true;
       counter--;
   
     } else {
-  
+
       check = false;
       i = word.length;
-  
+      
+      return console.log("La parola inserita non è palindroma");
     }
   
   }
@@ -29,10 +36,6 @@ function isPalindrome(word) {
   
     return console.log("La parola inserita è palindroma");
   
-  } else {
-
-    return console.log("La parola inserita non è palindroma");
-
   }
 
 }
